@@ -217,7 +217,6 @@ gsfonts
 foomatic-db-engine
 foomatic-db
 gutenprint
-foomatic-db-gutenprint-ppds
 
 ## Installer ------------------------------
 
@@ -261,7 +260,6 @@ atril
 
 ## Fonts
 noto-fonts
-noto-fonts-cjk
 noto-fonts-emoji
 terminus-font
 
