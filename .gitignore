@@ -3,3 +3,7 @@
 
 # ISO Directory
 /profile/out
+
+# Scripts
+cleanup.sh
+push.sh
