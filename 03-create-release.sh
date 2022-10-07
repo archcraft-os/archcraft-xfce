@@ -50,7 +50,7 @@ create_notes() {
 
 		- Type change-logs here
 
-		[**\`All Change logs\`**](https://github.com/archcraft-os/archcraft-xfce/blob/master/changelog.md)		
+		[**\`All Change logs\`**](https://github.com/archcraft-os/archcraft-xfce/blob/main/changelog.md)		
 	_EOF_
 	
 	echo -e "\n[*] Opening release notes file to edit changelogs..."
