@@ -38,7 +38,7 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 - **`ISO`** : [archcraft-xfce-2022.10.07-x86_64.iso](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso)
 - **`SIG`** : [archcraft-xfce-2022.10.07-x86_64.iso.sig](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso.sig)
 - **`SHA`** : [archcraft-xfce-2022.10.07-x86_64.iso.sha256sum](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso.sha256sum)
-`87f78677cf9a000860c8730390ceb56a267dbeeb8c2899b8e669f737f6ffe4c4`
+`9ee76b07167c549bd4c384e3b7c6bde8e0de9ca32809aa1db8b64ab0db976fb6`
 - **`TORRENT`** : [archcraft-xfce-2022.10.07-x86_64.iso.torrent](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso.torrent)
 
 ### Verify the authenticity of the ISO
