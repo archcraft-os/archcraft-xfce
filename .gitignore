@@ -4,6 +4,9 @@
 # ISO Directory
 /profile/out
 
+# Files
+/files
+
 # Scripts
 cleanup.sh
 push.sh
