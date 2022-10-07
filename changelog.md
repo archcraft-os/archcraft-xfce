@@ -13,7 +13,6 @@
 - Pipewire For Sound/Audio (Systemwide, Bluetooth, Jack)
 - Built-in Printer Support
 - Almost All Audio, Video and Image Codecs
-- Built-in Support for CJK fonts
 - Full File manager functionality (Mounting, Networking, Archiving, etc)
 - Built-in AUR support
 - Minimal User Interface
