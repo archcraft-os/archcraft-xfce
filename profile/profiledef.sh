@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="archcraft"
+iso_name="archcraft-xfce"
 iso_label="ARCHCRAFT_$(date +%Y%m)"
 iso_publisher="Aditya Shakya <http://www.github.com/adi1090x>"
 iso_application="Archcraft Live/Installation/Rescue CD"
