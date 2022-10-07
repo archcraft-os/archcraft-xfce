@@ -1,0 +1,52 @@
+# Maintainer: Aditya Shakya <adi1090x@gmail.com>
+
+pkgname=archcraft-xfce
+pkgver=1.0
+pkgrel=1
+pkgdesc="XFCE desktop configurations for Archcraft"
+url="https://github.com/archcraft-os/archcraft-xfce"
+arch=('any')
+license=('GPL3')
+makedepends=()
+depends=()
+conflicts=('archcraft-skeleton')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. ${srcdir}
+}
+
+package() {
+	local _styledir=${pkgdir}/usr/share/archcraft
+	local _skeldir=${pkgdir}/etc/skel
+	local _configdir=${pkgdir}/etc/skel/.config
+	local _bindir=${pkgdir}/usr/local/bin
+	local _xdgdir=${pkgdir}/etc/xdg
+	local _pixdir=${pkgdir}/usr/share/pixmaps
+
+	mkdir -p "$_styledir" && mkdir -p "$_skeldir" && mkdir -p "$_configdir"
+	mkdir -p "$_bindir" && mkdir -p "$_xdgdir" && mkdir -p "$_pixdir"
+
+	# Copy style scripts & fix permissions
+	cp -r ${srcdir}/xfce-styles ${_styledir}
+	chmod +x "$_styledir"/xfce-styles/*
+	
+	# Copy configs files
+	cfgs=(dconf geany gtk-3.0 Kvantum qt5ct Thunar xfce4)	
+	for cfg in "${cfgs[@]}"; do
+		cp -r ${srcdir}/"$cfg" 				"$_configdir"	
+	done
+
+	install -Dm 644 .dmrc					"$_skeldir"/.dmrc
+	install -Dm 644 .face					"$_skeldir"/.face
+	install -Dm 644 .hushlogin				"$_skeldir"/.hushlogin
+
+	# Copy scripts
+	cp -r ${srcdir}/scripts/* 				"$_bindir"
+	chmod +x "$_bindir"/*
+
+	# Misc
+	cp -r ${srcdir}/autostart 				"$_xdgdir"
+	install -Dm 644 xfce-menucraft.svg		"$_pixdir"/xfce-menucraft.svg	
+}

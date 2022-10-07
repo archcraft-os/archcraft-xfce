@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+yad --class="GSu" \
+    --title="Password" \
+    --text="Enter password for <b>$USER</b>" \
+    --image="dialog-password" \
+    --width=235	\
+    --entry --hide-text \
+    --center --undecorated --no-buttons

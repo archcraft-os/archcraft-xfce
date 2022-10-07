@@ -1,0 +1,32 @@
+# Maintainer: Aditya Shakya <adi1090x@gmail.com>
+
+pkgname=calamares-config-xfce
+pkgver=1.0
+pkgrel=1
+pkgdesc="Calamares configuration for Archcraft XFCE."
+url="https://github.com/archcraft-os/archcraft-xfce"
+arch=('any')
+license=('GPL')
+provides=($pkgname)
+conflicts=('calamares-config')
+depends=()
+
+prepare() {
+	cp -af ../files/. ${srcdir}
+}
+
+package() {
+	local _bindir=${pkgdir}/usr/bin
+	mkdir -p "$_bindir"
+
+	# copy all files recursively in /etc/calamares
+	(find calamares -type f -exec install -Dm 644 "{}" "$pkgdir/etc/{}" \;)
+
+	# copy install scripts
+	install -Dm 755 post_install.sh				"$_bindir"/post_install.sh
+	install -Dm 755 chrooted_post_install.sh	"$_bindir"/chrooted_post_install.sh
+
+	# make scripts executable
+	chmod 755 "$pkgdir"/etc/calamares/launch.sh
+	chmod 755 "$pkgdir"/etc/calamares/branding/archcraft/test-slides.sh
+}

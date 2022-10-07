@@ -1,0 +1,77 @@
+# SPDX-FileCopyrightText: no
+# SPDX-License-Identifier: CC0-1.0
+#
+## Distribution Branding Settings
+
+---
+componentName:  archcraft
+
+## Show "Welcome to the Calamares installer for Archcraft." instead?
+welcomeStyleCalamares:   false
+
+## Should the welcome image be scaled up beyond its natural size?
+welcomeExpandingLogo:   true
+
+## Should the calamares window expand?
+# Size and expansion policy for Calamares.
+#  - "normal" or unset, expand as needed, use *windowSize*
+#  - "fullscreen", start as large as possible, ignore *windowSize*
+#  - "noexpand", don't expand automatically, use *windowSize*
+windowExpanding:    noexpand
+
+## Size of Calamares window, expressed as w,h. (px, em)
+windowSize: 800px,600px
+
+## Placement of Calamares window. Either "center" or "free".
+windowPlacement: center
+
+## Sidebar Style (widget, qml, none)
+sidebar: widget
+
+## Navigation Style, buttons on the bottom (widget, qml, none)
+navigation: widget
+
+## Strings
+strings:
+    productName:         Archcraft
+    shortProductName:    Archcraft
+#    version:             null
+#    shortVersion:        null
+    versionedName:       Archcraft
+    shortVersionedName:  Archcraft
+    bootloaderEntryName: Archcraft
+    productUrl:          https://archcraft.io
+    supportUrl:          https://reddit.com/r/archcraft
+    knownIssuesUrl:      https://github.com/archcraft-os/archcraft-xfce/issues
+    releaseNotesUrl:     https://github.com/archcraft-os/archcraft-xfce/blob/master/changelog.md
+    donateUrl:           https://archcraft.io/donate
+
+## Images
+# productBanner : On top of welcome text (64x460)
+# productIcon : Icon on titlebar (16x16)
+# productLogo : Logo in sidebar (80x80)
+# productWallpaper : Replace the solid color in main window (800x520)
+# productWelcome : In the middle of main window on welcome (320x150)
+images:
+    #productBanner:       "banner.png"
+    productIcon:         "icon.svg"
+    productLogo:         "logo.svg"
+    #productWallpaper:    "wallpaper.png"
+    productWelcome:      "welcome.png"
+
+## Colors for text and background components in sidebar only.
+style:
+   sidebarBackground:    "#353945"
+   sidebarText:          "#EFF0F1"
+   sidebarTextSelect:    "#FFFFFF"
+   sidebarTextHighlight: "#5294E2"
+
+## Slideshow
+slideshow:               "show.qml"
+slideshowAPI: 2
+
+## Upload the logs to pastebins:
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
+    sizeLimit : -1

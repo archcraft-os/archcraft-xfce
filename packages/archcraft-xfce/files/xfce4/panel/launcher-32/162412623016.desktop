@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Adaptive
+Comment=Adaptive Style for XFCE Desktop
+Exec=/usr/share/archcraft/xfce-styles/Adaptive.sh
+Icon=gtk-theme-config
+Path=
+Terminal=false
+StartupNotify=false
