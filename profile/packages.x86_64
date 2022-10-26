@@ -189,6 +189,7 @@ wireplumber
 pipewire-alsa
 pipewire-pulse
 pipewire-jack
+pulsemixer
 gst-plugin-pipewire
 
 ## Video
