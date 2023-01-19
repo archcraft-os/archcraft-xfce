@@ -44,7 +44,7 @@ strings:
     supportUrl:          https://reddit.com/r/archcraft
     knownIssuesUrl:      https://github.com/archcraft-os/archcraft-xfce/issues
     releaseNotesUrl:     https://github.com/archcraft-os/archcraft-xfce/blob/master/changelog.md
-    donateUrl:           https://archcraft.io/donate
+#    donateUrl:           https://archcraft.io/donate
 
 ## Images
 # productBanner : On top of welcome text (64x460)

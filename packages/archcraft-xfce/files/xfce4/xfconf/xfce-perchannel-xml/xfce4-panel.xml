@@ -102,6 +102,9 @@
     </property>
     <property name="plugin-28" type="string" value="clock">
       <property name="digital-format" type="string" value="%I:%M %p"/>
+      <property name="digital-time-format" type="string" value="%I:%M %p"/>
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-font" type="string" value="Sans 9"/>
     </property>
     <property name="plugin-30" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -112,20 +115,6 @@
     <property name="plugin-32" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="16241260409.desktop"/>
-        <value type="string" value="162412623010.desktop"/>
-        <value type="string" value="162412623011.desktop"/>
-        <value type="string" value="162412623012.desktop"/>
-        <value type="string" value="162412623013.desktop"/>
-        <value type="string" value="162412623014.desktop"/>
-        <value type="string" value="162412623015.desktop"/>
-        <value type="string" value="162412623016.desktop"/>
-        <value type="string" value="162412623017.desktop"/>
-        <value type="string" value="162412623018.desktop"/>
-        <value type="string" value="162412623019.desktop"/>
-        <value type="string" value="162412623020.desktop"/>
-        <value type="string" value="162412623021.desktop"/>
-        <value type="string" value="162412623022.desktop"/>
-        <value type="string" value="162412623023.desktop"/>
       </property>
       <property name="disable-tooltips" type="bool" value="false"/>
       <property name="show-label" type="bool" value="true"/>

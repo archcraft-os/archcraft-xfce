@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Default 
-Comment=Default Style for XFCE Desktop
-Exec=/usr/share/archcraft/xfce-styles/Default.sh
+Name=Themes
+Comment=Theme Manager For XFCE Desktop
+Exec=/usr/local/bin/theme-manager-xfce
 Icon=gtk-theme-config
 Path=
 Terminal=false

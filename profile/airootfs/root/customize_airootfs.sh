@@ -69,6 +69,11 @@ EOL
 
 ## -------------------------------------------------------------- ##
 
+## Set zsh as default shell for new user
+sed -i -e 's#SHELL=.*#SHELL=/bin/zsh#g' /etc/default/useradd
+
+## -------------------------------------------------------------- ##
+
 ## Copy Few Configs Into Root Dir
 rdir="/root/.config"
 sdir="/etc/skel"
@@ -93,8 +98,8 @@ done
 ## -------------------------------------------------------------- ##
 
 ## Fix wallpaper in xfce
-mv /usr/share/backgrounds/xfce/xfce-verticals.png /usr/share/backgrounds/xfce/xfce_verticals.png
-cp -rf /usr/share/backgrounds/default.jpg /usr/share/backgrounds/xfce/xfce-verticals.png
+mv /usr/share/backgrounds/xfce/xfce-shapes.svg /usr/share/backgrounds/xfce/xfce-shapes-ac.svg
+cp -rf /usr/share/backgrounds/default.jpg /usr/share/backgrounds/xfce/xfce-shapes.svg
 
 ## -------------------------------------------------------------- ##
 
@@ -111,8 +116,8 @@ chmod +x "${_desktop}"/calamares.desktop
 
 ## -------------------------------------------------------------- ##
 
-## Set `Qogirr` as default cursor theme
-sed -i -e 's|Inherits=.*|Inherits=Qogirr|g' /usr/share/icons/default/index.theme
+## Fix cursor theme
+rm -rf /usr/share/icons/default
 
 ## Update xdg-user-dirs for bookmarks in thunar and pcmanfm
 runuser -l liveuser -c 'xdg-user-dirs-update'

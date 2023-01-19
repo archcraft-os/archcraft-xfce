@@ -39,8 +39,6 @@ gptfdisk
 hdparm
 hyperv
 intel-ucode
-#ipw2100-fw
-#ipw2200-fw
 irssi
 iw
 iwd
@@ -246,11 +244,14 @@ archcraft-wallpapers
 archcraft-fonts
 archcraft-about
 archcraft-artworks
+archcraft-funscripts
 archcraft-neofetch
-archcraft-hooks-zsh
 archcraft-omz
 archcraft-ranger
 archcraft-vim
+archcraft-config-geany
+archcraft-config-qt
+archcraft-hooks-zsh
 
 firefox
 geany
@@ -328,8 +329,9 @@ gparted
 polkit
 udisks2
 yad
-gpick
+xcolor
 meld
+xclip
 
 ## AUR Packages
 downgrade

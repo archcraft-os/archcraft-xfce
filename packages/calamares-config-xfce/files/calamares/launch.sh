@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 
 ## Check if booted using 'Copy to RAM' mode
 DIR="/etc/calamares"

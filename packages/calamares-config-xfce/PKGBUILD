@@ -2,7 +2,7 @@
 
 pkgname=calamares-config-xfce
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Calamares configuration for Archcraft XFCE."
 url="https://github.com/archcraft-os/archcraft-xfce"
 arch=('any')

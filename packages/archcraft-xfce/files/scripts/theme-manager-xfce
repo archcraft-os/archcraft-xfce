@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+##
+## Script To Manage Themes
+
+## Themes -----------------------------------
+THEMES_DIR="$HOME/.config/xfce-themes"
+THEMES=(`cd $THEMES_DIR && ls -p *.bash`)
+TOTAL=`for theme in "${THEMES[@]}"; do echo ${theme%.*}; done | wc -l`
+CURRENT="`cat $THEMES_DIR/.current`"
+
+if [[ ! `pidof yad` ]]; then
+	selected=$(for theme in "${THEMES[@]}"; do echo FALSE ; echo ${theme%.*}; done | yad \
+		--title="Change Theme" --window-icon=channelmixer \
+		--width='300' --height='300' \
+		--text="Available Themes: <b>$TOTAL</b>\nCurrent Theme: <b>$CURRENT</b>" --text-align='left' \
+		--image=channelmixer --button=Cancel:1 --button=Apply:0 --buttons-layout=edge \
+		--borders=10 --on-top --undecorated --skip-taskbar --mouse\
+		\
+		--list \
+		--column="Select" --column="Theme" --print-column="2" \
+		--radiolist --separator='')
+else
+	pkill yad
+fi
+
+if [[ -z "$selected" ]]; then
+	exit 1
+else
+	"$HOME"/.config/xfce-themes/apply.sh "$selected"
+	exit 0
+fi

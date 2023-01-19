@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+
+yad --class="GSu" \
+    --title="Password" \
+    --text="Enter password for <b>$USER</b>" \
+    --image="dialog-password" \
+    --width=235	\
+    --entry --hide-text \
+    --center --undecorated --no-buttons
