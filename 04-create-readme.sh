@@ -29,12 +29,6 @@ cat > "$FILE" <<- _EOF_
 	</p>
 
 	<p align="center">
-	  <a href="https://ko-fi.com/adi1090x"><img width="32px" src="https://raw.githubusercontent.com/archcraft-os/.github/main/profile/assets/1.png" alt="Donate for Archcraft on ko-fi"></a>&nbsp;
-	  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6VETHHYHXESRN"><img width="32px" src="https://raw.githubusercontent.com/archcraft-os/.github/main/profile/assets/2.png" alt="Donate for Archcraft via Paypal"></a>&nbsp;
-	  <a href="https://liberapay.com/adi1090x"><img width="32px" src="https://raw.githubusercontent.com/archcraft-os/.github/main/profile/assets/3.png" alt="Donate for Archcraft via Liberapay"></a>
-	</p>
-
-	<p align="center">
 	  <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=flat-square">
 	  <img src="https://img.shields.io/github/downloads/archcraft-os/archcraft-xfce/total?label=downloads&logo=github&color=blue&style=flat-square">
 	  <img src="https://img.shields.io/github/issues/archcraft-os/archcraft-xfce?color=violet&style=flat-square">
@@ -89,7 +83,7 @@ cat > "$FILE" <<- _EOF_
 	\`\`\`
 _EOF_
 
-if [[ `cat $FILE | wc -l` -eq "63" ]]; then
+if [[ `cat $FILE | wc -l` -eq "57" ]]; then
 	echo -e "\n[*] File generated successfully.\n"
 	read -p "[?] Do you want to delete the 'files' directory (y/n) : "
 	if [[ "$REPLY" == "y" ]]; then

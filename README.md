@@ -29,11 +29,11 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 
 ### Latest Release
 
-- **`ISO`** : [archcraft-xfce-2022.10.07-x86_64.iso](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso)
-- **`SIG`** : [archcraft-xfce-2022.10.07-x86_64.iso.sig](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso.sig)
-- **`SHA`** : [archcraft-xfce-2022.10.07-x86_64.iso.sha256sum](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso.sha256sum)
-`9ee76b07167c549bd4c384e3b7c6bde8e0de9ca32809aa1db8b64ab0db976fb6`
-- **`TORRENT`** : [archcraft-xfce-2022.10.07-x86_64.iso.torrent](https://github.com/archcraft-os/archcraft-xfce/releases/download/v22.10/archcraft-xfce-2022.10.07-x86_64.iso.torrent)
+- **`ISO`** : [archcraft-xfce-2023.01.20-x86_64.iso](https://github.com/archcraft-os/archcraft-xfce/releases/download/v23.01/archcraft-xfce-2023.01.20-x86_64.iso)
+- **`SIG`** : [archcraft-xfce-2023.01.20-x86_64.iso.sig](https://github.com/archcraft-os/archcraft-xfce/releases/download/v23.01/archcraft-xfce-2023.01.20-x86_64.iso.sig)
+- **`SHA`** : [archcraft-xfce-2023.01.20-x86_64.iso.sha256sum](https://github.com/archcraft-os/archcraft-xfce/releases/download/v23.01/archcraft-xfce-2023.01.20-x86_64.iso.sha256sum)
+`6dda9958dfef19500db658b955b0519f14a92abeff4aeaf76a7e263c405bcfc2`
+- **`TORRENT`** : [archcraft-xfce-2023.01.20-x86_64.iso.torrent](https://github.com/archcraft-os/archcraft-xfce/releases/download/v23.01/archcraft-xfce-2023.01.20-x86_64.iso.torrent)
 
 ### Verify the authenticity of the ISO
 
@@ -48,10 +48,10 @@ $ gpg --keyserver hkp://pgp.mit.edu --recv-keys 7DC81F73
 
 - Then, Open `terminal` in the `~/Downloads` folder and run following command :
 ```
-$ gpg --verify archcraft-xfce-2022.10.07-x86_64.iso.sig
+$ gpg --verify archcraft-xfce-2023.01.20-x86_64.iso.sig
 ```
 
 - Finally, Verify the `sha256sum` by running :
 ```
-$ sha256sum -c archcraft-xfce-2022.10.07-x86_64.iso.sha256sum
+$ sha256sum -c archcraft-xfce-2023.01.20-x86_64.iso.sha256sum
 ```
