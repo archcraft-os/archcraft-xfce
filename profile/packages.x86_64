@@ -29,6 +29,7 @@ ethtool
 exfatprogs
 f2fs-tools
 fatresize
+foot-terminfo
 fsarchiver
 gnu-netcat
 gpart
@@ -61,6 +62,7 @@ man-pages
 mc
 mdadm
 #memtest86+
+#memtest86+-efi
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
@@ -114,6 +116,7 @@ usbutils
 vim
 #virtualbox-guest-utils-nox
 vpnc
+wezterm-terminfo
 wireless-regdb
 wireless_tools
 wpa_supplicant
@@ -149,6 +152,8 @@ xf86-video-vesa
 xf86-video-intel
 xf86-video-amdgpu
 xf86-video-ati
+mesa
+mesa-utils
 
 ## GPU Drivers (Nvidia) ------------------------------
 xf86-video-nouveau
@@ -188,6 +193,7 @@ pipewire-alsa
 pipewire-pulse
 pipewire-jack
 pulsemixer
+pavucontrol
 gst-plugin-pipewire
 
 ## Video
@@ -229,14 +235,35 @@ kvantum
 qt5ct
 
 ## Display Manager ------------------------------
-sddm
+sddm-git
 archcraft-sddm-theme
 
-## DE/WMs ------------------------------
+## Desktop ------------------------------
 xfce4
 xfce4-goodies
 archcraft-xfce
 
+# Apps
+firefox
+geany
+geany-plugins
+atril
+
+# Utilities
+acpi
+galculator
+gparted
+gnome-keyring
+meld
+polkit
+simplescreenrecorder
+udisks2
+xclip
+xcolor
+xdotool
+yad
+
+# Archcraft Packages
 archcraft-cursors
 archcraft-icons
 archcraft-themes
@@ -253,16 +280,12 @@ archcraft-config-geany
 archcraft-config-qt
 archcraft-hooks-zsh
 
-firefox
-geany
-geany-plugins
-atril
-
 ## Functionality ------------------------------
 
 ## Fonts
 noto-fonts
 noto-fonts-emoji
+noto-fonts-cjk
 terminus-font
 
 ## Multimedia
@@ -307,7 +330,9 @@ xarchiver
 ## Misc ------------------------------
 
 ## Package Tools
+bison
 fakeroot
+flex
 make
 automake
 autoconf
@@ -323,18 +348,9 @@ powertop
 ranger
 vim
 
-## Utilities
-acpi
-gparted
-polkit
-udisks2
-yad
-xcolor
-meld
-xclip
-
 ## AUR Packages
 downgrade
+gtk3-nocsd-git
 ksuperkey
 mkinitcpio-firmware
 mugshot

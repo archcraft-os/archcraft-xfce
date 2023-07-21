@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-
+##
 ## Post installation script for Archcraft (Executes on target system to perform various operations)
 
 ## -----------------------------------------------
@@ -262,29 +261,22 @@ _perform_various_stuff() {
 	mkdir -p /boot/grub/themes
 	cp -rf /usr/share/grub/themes/archcraft /boot/grub/themes
 
-	# disabling autologin for lightdm (if exist)
-	lightdm_config='/etc/lightdm/lightdm.conf'
-	if [[ -e "$lightdm_config" ]]; then
-		echo "+---------------------->>"
-		echo "[*] Disabling autologin for lightdm..."
-		sed -i -e 's|autologin-user=.*|#autologin-user=username|g' "$lightdm_config"
-		sed -i -e 's|autologin-session=.*|#autologin-session=openbox|g' "$lightdm_config"
-	fi
-
-	# disabling autologin for lxdm (if exist)
-	lxdm_config='/etc/lxdm/lxdm.conf'
-	if [[ -e "$lxdm_config" ]]; then
-		echo "+---------------------->>"
-		echo "[*] Disabling autologin for lxdm..."
-		sed -i -e 's/autologin=.*/#autologin=username/g' "$lxdm_config"
-	fi
-
 	# disabling autologin for sddm (if exist)
 	sddm_config='/etc/sddm.conf.d/kde_settings.conf'
 	if [[ -e "$sddm_config" ]]; then
 		echo "+---------------------->>"
 		echo "[*] Disabling autologin for sddm..."
 		sed -i -e 's/User=liveuser/#User=username/g' "$sddm_config"
+	fi
+
+	# Fix Directory menu in xfce panel
+	panel_config="/home/${new_user}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml"
+	if [[ -e "$panel_config" ]]; then
+		echo "+---------------------->>"
+		echo "[*] Fixing directory menu in xfce-panel..."
+		sed -i -e "s|/home/liveuser|/home/$new_user|g" "$panel_config"
+		sed -i -e "s|/home/liveuser|/home/$new_user|g" /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+		chown -R ${new_user}:${new_user} "$panel_config"
 	fi
 
 	# Perform various operations

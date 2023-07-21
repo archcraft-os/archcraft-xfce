@@ -1,8 +1,9 @@
 #!/bin/bash
 
 ## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
-##
-## Post installation script for Archcraft (Executes on live system, only to detect drivers in use)
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+## Post installation script for Archcraft (only to detect nvidia)
 
 ##--------------------------------------------------------------------------------
 
@@ -24,47 +25,39 @@ arch_chroot() {
 }
 
 ## Detect drivers in use in live session
-gpu_file="$chroot_path"/var/log/gpu-card-info.bash
+nvidia_gpu_file="$chroot_path"/var/log/nvidia-gpu-card-info.bash
 
-_detect_vga_drivers() {
-    local card=no
-    local driver=no
+_detect_nvidia_drivers() {
+    local nvidia_card=no
+    local nvidia_driver=no
 
-    if [[ -n "`lspci -k | grep -P 'VGA|3D|Display' | grep -w "${2}"`" ]]; then
-        card=yes
-        if [[ -n "`lsmod | grep -w ${3}`" ]]; then
-			driver=yes
+    if [[ -n "`lspci -k | grep -P 'VGA|3D|Display' | grep -w 'NVIDIA'`" ]]; then
+        nvidia_card=yes
+        if [[ -n "`lsmod | grep -w nvidia`" ]]; then
+			nvidia_driver=yes
 		fi
-        if [[ -n "`lspci -k | grep -wA2 "${2}" | grep 'Kernel driver in use: ${3}'`" ]]; then
-			driver=yes
+        if [[ -n "`lspci -k | grep -wA2 'NVIDIA' | grep 'Kernel driver in use: nvidia'`" ]]; then
+			nvidia_driver=yes
 		fi
     fi
-    echo "${1}_card=$card"     >> ${gpu_file}
-    echo "${1}_driver=$driver" >> ${gpu_file}
+    echo "nvidia_card=$nvidia_card"     >> ${nvidia_gpu_file}
+    echo "nvidia_driver=$nvidia_driver" >> ${nvidia_gpu_file}
 }
 
 echo "+---------------------->>"
-echo "[*] Detecting GPU card & drivers used in live session..."
-
-# Detect AMD
-_detect_vga_drivers 'amd' 'AMD' 'amdgpu'
-
-# Detect Intel
-_detect_vga_drivers 'intel' 'Intel Corporation' 'i915'
-
-# Detect Nvidia
-_detect_vga_drivers 'nvidia' 'NVIDIA' 'nvidia'
+echo "[*] Detecting NVIDIA GPU card & drivers used in live session..."
+_detect_nvidia_drivers
 
 # For logs
 echo "+---------------------->>"
-echo "[*] Content of $gpu_file :"
-cat ${gpu_file}
+echo "[*] Content of $nvidia_gpu_file :"
+cat ${nvidia_gpu_file}
 
 ##--------------------------------------------------------------------------------
 
 ## Run the final script inside calamares chroot (target system)
 if [[ `pidof calamares` ]]; then
 	echo "+---------------------->>"
-	echo "[*] Running chroot post installation script in target system..."
-	arch_chroot "/usr/bin/chrooted_post_install.sh"
+	echo "[*] Running nvidia chroot post installation script in target system..."
+	arch_chroot "/usr/bin/chrooted_post_install_nvidia.sh"
 fi
