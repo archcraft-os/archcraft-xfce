@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=flat-square">
-  <img src="https://img.shields.io/github/downloads/archcraft-os/archcraft-xfce/total?label=downloads&logo=github&color=blue&style=flat-square">
+  <img src="https://img.shields.io/sourceforge/dt/archcraft-xfce.svg?label=downloads&logo=sourceforge&color=teal&style=flat-square">
   <img src="https://img.shields.io/github/issues/archcraft-os/archcraft-xfce?color=violet&style=flat-square">
   <img src="https://img.shields.io/github/license/archcraft-os/archcraft-xfce?color=orange&style=flat-square">
 </p>
@@ -31,14 +31,6 @@ Archcraft is an <b>arch-based</b> rolling-release distribution aimed at users wh
 
 #
 
-> This repository contains old released (before July 2023). As the new ISOs increased in size more than 2GB, I can't release them on github due to it's limitations.
-
-### Latest Release
-
-**`MEGA`** : [Download](https://mega.nz/folder/775yGYSK#do-EQqjktg11HaD0baU_2Q)
-
-#
-
 ### From Archcraft Wiki
 
 - [Things To Do After Installing Archcraft](https://wiki.archcraft.io/docs/install-archcraft/post-install)
@@ -46,4 +38,3 @@ Archcraft is an <b>arch-based</b> rolling-release distribution aimed at users wh
 - [Install Archcraft With ABIF](https://wiki.archcraft.io/docs/install-archcraft/install-with-abif)
 - [Create A Bootable USB With Archcraft](https://wiki.archcraft.io/docs/boot-iso/boot-with-usb)
 - [Boot Archcraft ISO With GRUB2 Bootloader](https://wiki.archcraft.io/docs/boot-iso/boot-with-grub)
-
