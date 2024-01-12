@@ -2,21 +2,19 @@
 
 pkgname=calamares-config-xfce
 pkgver=2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Calamares configuration for Archcraft XFCE."
-url="https://github.com/archcraft-os/archcraft-xfce"
 arch=('any')
+url="https://github.com/archcraft-os/archcraft-xfce"
 license=('GPL')
-provides=($pkgname)
 conflicts=('calamares-config' 'calamares-config-prime' 'calamares-config-wayland')
-depends=()
 
 prepare() {
-	cp -af ../files/. ${srcdir}
+	cp -af ../files/. "$srcdir"
 }
 
 package() {
-	local _bindir=${pkgdir}/usr/bin
+	local _bindir="$pkgdir"/usr/bin
 	mkdir -p "$_bindir"
 
 	# copy all files recursively in /etc/calamares

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 ## Generate sha256sum and gpg signature files
 PWD=`pwd`
-DIR="$PWD/files"
+DIR="$PWD/out"
 
 if [[ ! -d "$DIR" ]]; then
-	mkdir -p "$DIR"
+	exit 1
 fi
 
 RELEASE=`find $DIR -type f -name "archcraft-*.iso" -printf "%f\n"`

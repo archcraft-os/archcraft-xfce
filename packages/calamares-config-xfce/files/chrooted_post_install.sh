@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 ##
 ## Post installation script for Archcraft (Executes on target system to perform various operations)
 

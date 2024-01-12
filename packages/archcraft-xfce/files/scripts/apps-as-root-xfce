@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 ## sudo askpass helper
-export SUDO_ASKPASS=/usr/local/bin/ask-user-pw-xfce
+export SUDO_ASKPASS=/usr/bin/ask-user-pw-xfce
 
 ## execute the application
 sudo -A $1

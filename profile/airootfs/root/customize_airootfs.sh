@@ -113,6 +113,11 @@ chmod +x "${_desktop}"/calamares.desktop
 
 ## -------------------------------------------------------------- ##
 
+## Fix grub theme path, issue with ABIF LUKS installation
+sed -i -e 's#GRUB_THEME=.*#GRUB_THEME="/boot/grub/themes/archcraft/theme.txt"#g' /etc/default/grub
+
+## -------------------------------------------------------------- ##
+
 ## Fix cursor theme
 rm -rf /usr/share/icons/default
 

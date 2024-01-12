@@ -1,5 +1,14 @@
 <h2 align="center">Archcraft (XFCE) : Changelogs</h2>
 
+### January 2024
+**`Just a regular ISO update`**
+- Updated ISO base and profile
+- Updated the ISO with latest packages
+- Fixed theming issue with xfce terminal
+- Bug Fixes, Etc.
+
+#
+
 ### July 2023
 **`Just a regular ISO update`**
 - Updated ISO base and profile
